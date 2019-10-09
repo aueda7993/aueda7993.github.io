@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#2196f3">
+    <!-- Site Data -->
+    <title>BMI calc</title>
+    <meta name="description" content="" />
+    <meta name="author" content="ueda atsuki" />
+    <meta name="keywords" content="" />
+    <!-- キャッシュクリア -->
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- ローカル CSS -->
+    <link rel="stylesheet" href="./bodycalc.css">
+    <!-- JS -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+
+    <meta property="og:image" content="./human.png">
+    <meta itemprop="image" content="./human.png">
+    <link rel="shortcut icon" href="./human.png">
+    <link rel="apple-touch-icon" href="./human.png">
+    <link rel="icon" href="./human.png">
+</head>
+
+<body>
+    <section id="wrap0" class="SlideInbox">
+        <h1 class="non-select">Your BMI</h1>
+        <article>
+            <label for="heightvalue0" class="non-select">HEIGHT(cm)：</label>
+            <input id="your_height" class="non-select" type="number" value="160" step="0.5" min="100" max="250" list="defaultvalue0"
+                name="heightvalue0" maxlength="3"/>
+            <!--<datalist id="defaultvalue0" class="non-select">
+                <option value="140">
+                <option value="150">
+                <option value="160">
+                <option value="170">
+                <option value="180">
+            </datalist>-->
+        </article>
+
+        <article>
+            <label for="weightvalue0" class="non-select">WEIGHT(kg)：</label>
+            <input id="your_weight" type="number" value="50" step="0.5" min="30" max="200" list="defaultvalue1" name="weightvalue0" class="non-select" maxlength="3"
+            />
+            <!--<datalist id="defaultvalue1" class="non-select">
+                <option value="40">
+                <option value="50">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+            </datalist>-->
+            <button id="calc_BMI" class="non-select" onclick="calc_BMI();">calc</button>
+
+            <table id="result0">
+                <tr>
+                    <th class="non-select">BMI</th>
+                    <td></td>
+                </tr>
+            </table>
+        </article>
+
+    </section>
+    <section id="wrap1" class="SlideInbox">
+
+        <h1 class="non-select">Suit yourself</h1>
+        <article>
+            <label for="heightvalue1" class="non-select">height：</label>
+            <input id="height" class="non-select" type="number" value="160" step="0.5" min="100" max="250" list="defaultvalue2" name="heightvalue1" maxlength="3"
+            />
+            <!--<datalist id="defaultvalue2" class="non-select">
+                <option value="140">
+                <option value="150">
+                <option value="160">
+                <option value="170">
+                <option value="180">
+            </datalist>-->
+            </datalist>
+            <button id="calc_weight" class="non-select" onclick="calc_weight();">calc</button>
+            <div class="scroll-wrap">
+                <table id="result1">
+                    <tr>
+                        <th class="non-select">BMI</th>
+                        <td class="yellow"></td>
+                        <td class="yellow"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="red"></td>
+                        <td class="red"></td>
+                    </tr>
+                    <tr>
+                        <th class="non-select">WEIGHT</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </section>
+    <script src="calcFunc.js"></script>
+
+
+<!--
+<article>
+    <label for="range0">スライダー</label><br />
+    <input id="range0" type="range" min="100" max="200" step="1" value="165" list="step" style="width:600px;" />
+    <span id="showValueArea">0</span>
+
+    <script>
+    var obj = document.getElementById("range0");
+    function showValue() {
+        document.getElementById("showValueArea").textContent = obj.value;
+    }
+    obj.addEventListener("change", showValue, false);
+    </script>
+    <datalist id="step">
+    <option>100</option>
+    <option>105</option>
+    <option>110</option>
+    <option>115</option>
+    <option>120</option>
+    <option>125</option>
+    <option>130</option>
+    <option>135</option>
+    <option>140</option>
+    <option>145</option>
+    <option>150</option>
+    <option>155</option>
+    <option>160</option>
+    <option>165</option>
+    <option>170</option>
+    <option>175</option>
+    <option>180</option>
+    <option>185</option>
+    <option>190</option>
+    <option>195</option>
+    </datalist>
+</article>
+-->
+</body>
+
+</html>
